@@ -25,6 +25,7 @@ const Achievement = () => {
         <div className="selectedAchievemenet--first_line">
           <div className="selectedAchievement--trophy_container">
             <img src={goldtrophy} alt="" className="selectedAchievement--trophy" />
+            <div className="selectedAchievement--trophy_tag">FIRST PRIZE</div>
           </div>
           <div className="selectedAchievement--name">DESLab</div>
         </div>

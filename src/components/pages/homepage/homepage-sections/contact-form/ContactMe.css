@@ -1,0 +1,88 @@
+.contactMe {
+  /* height: 100vh; */
+  width: 100%;
+  /* background-color: inherit; */
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  padding: 50px 150px 100px 150px;
+}
+
+.contactMe--heading {
+  margin-bottom: 20px;
+  font-family: "Protest Strike", sans-serif;
+  font-size: 60px;
+}
+
+.contactMe--contents {
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+  gap: 50px;
+  font-size: 20px;
+  /* padding: 0 100px; */
+}
+
+.contactMe--statement {
+  width: 40%;
+  /* margin-top: 30px; */
+}
+
+.contactMe--statement_text {
+  margin-bottom: 30px;
+}
+
+.contactMe--contacts {
+  /* color: rgb(245, 232, 155); */
+  padding: 30px;
+}
+
+.contactMe--contact_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contactMe--contact_icon {
+  height: 20px;
+}
+
+.contactMe--form_container {
+  width: 50%;
+  border: 5px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.contactMe--form {
+  width: 98%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.contactMe--form input,
+.contactMe--form button,
+.contactMe--form textarea {
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.contactMe--submit_button {
+  background-color: rgba(2, 18, 26, 0.8);
+  color: white;
+  /* border: 3px solid white; */
+  border: none;
+  border-radius: 0 0 6px 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contactMe--submit_button:hover {
+  color: rgb(245, 232, 155);
+}

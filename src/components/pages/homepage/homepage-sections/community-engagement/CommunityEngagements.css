@@ -1,0 +1,36 @@
+.selectedCommunityEngagements {
+  /* height: 100vh; */
+  width: 100%;
+  /* background-color: inherit; */
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  padding: 50px 150px 100px 150px;
+}
+
+.selectedCommunityEngagements--headings {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  font-family: "Protest Strike", sans-serif;
+}
+
+.selectedCommunityEngagements--see_more {
+  /* font-weight: bold; */
+  font-size: 30px;
+  cursor: pointer;
+  /* font-style: italic; */
+}
+
+.selectedCommunityEngagements--heading {
+  font-size: 60px;
+}
+
+.selectedCommunityEngagements--communityEngagement_list {
+  /* display: flex;
+  justify-content: space-between; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
