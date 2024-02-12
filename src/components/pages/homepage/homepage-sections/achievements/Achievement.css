@@ -1,0 +1,36 @@
+.selectedAchievement {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* image */
+
+.selectedAchievement--image_container {
+  background-color: darkcyan;
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+}
+
+.selectedAchievement--texts {
+  width: 350px;
+}
+
+.selectedAchievement--description {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+/* texts */
+
+.selectedAchievement--name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.selectedAchievement--type {
+  font-size: 18px;
+  margin: 8px 0;
+}

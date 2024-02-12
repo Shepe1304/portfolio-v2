@@ -1,0 +1,32 @@
+.selectedExperienceList {
+  /* height: 100vh; */
+  /* background-color: inherit; */
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  padding: 50px 150px 100px 150px;
+}
+
+.selectedExperienceList--headings {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  font-family: "Protest Strike", sans-serif;
+}
+
+.selectedExperienceList--see_more {
+  /* font-weight: bold; */
+  font-size: 30px;
+  cursor: pointer;
+  /* font-style: italic; */
+}
+
+.selectedExperienceList--heading {
+  font-size: 60px;
+}
+
+.selectedExperienceList--experience_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}

@@ -1,0 +1,36 @@
+.selectedExperience {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* image */
+
+.selectedExperience--image_container {
+  background-color: darkcyan;
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+}
+
+.selectedExperience--texts {
+  width: 350px;
+}
+
+.selectedExperience--description {
+  font-size: 15px;
+  font-weight: 200;
+}
+
+/* texts */
+
+.selectedExperience--name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.selectedExperience--type {
+  font-size: 18px;
+  margin: 8px 0;
+}

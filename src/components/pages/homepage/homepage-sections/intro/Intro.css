@@ -1,0 +1,69 @@
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86vh;
+  /* background-color: #1d1e2a; */
+  /* background-color: inherit; */
+  font-family: "Roboto Mono", monospace;
+  padding: 0 150px;
+}
+
+/* profile pic */
+
+.profile_pic_big_container {
+  border-radius: 1000px;
+  width: 450px;
+  height: 450px;
+  border: 10px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro--profile_pic_container {
+  border-radius: 1000px;
+  width: 400px;
+  height: 400px;
+}
+
+.intro--profile_pic {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right;
+}
+
+.intro--texts {
+  color: white;
+  margin: -100px 0 0 0;
+}
+
+.intro--name {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 80px;
+  margin: 30px 0;
+  /* display: flex;
+  align-items: center;
+  gap: 20px; */
+}
+
+.intro--nickname {
+  font-size: 50px;
+  /* text-align: right; */
+}
+
+.intro--personal_statement {
+  font-size: 30px;
+  color: white;
+}
+
+.intro--personal_statement_text {
+  transition: color 0.15s;
+}
+
+.intro--personal_statement_text:hover {
+  cursor: crosshair;
+  color: rgb(245, 232, 155);
+}

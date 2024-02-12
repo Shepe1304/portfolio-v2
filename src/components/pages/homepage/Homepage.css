@@ -1,0 +1,21 @@
+/* .homepage {
+  background-color: #2e3047;
+  background-color: #1d1e2a;
+  background-color: rgba(29, 30, 42, 0.5);
+} */
+
+.homepage--main {
+  /* height: 100vh; */
+  background-color: rgba(29, 30, 42, 0.7);
+  position: relative;
+}
+
+.homepage--background {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

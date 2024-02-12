@@ -1,0 +1,36 @@
+.selectedProjects {
+  /* height: 100vh; */
+  width: 100%;
+  /* background-color: inherit; */
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  padding: 50px 150px 100px 150px;
+}
+
+.selectedProjects--headings {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  font-family: "Protest Strike", sans-serif;
+}
+
+.selectedProjects--see_more {
+  /* font-weight: bold; */
+  font-size: 30px;
+  cursor: pointer;
+  /* font-style: italic; */
+}
+
+.selectedProjects--heading {
+  font-size: 60px;
+}
+
+.selectedProjects--project_list {
+  /* display: flex;
+  justify-content: space-between; */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* gap: 30px; */
+}
