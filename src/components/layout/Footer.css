@@ -1,0 +1,11 @@
+.footer {
+  /* width: 100vw; */
+  /* background-color: inherit; */
+  background-color: #2e3047;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

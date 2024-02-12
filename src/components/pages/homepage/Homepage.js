@@ -23,7 +23,7 @@ const homepage = () => {
         <CommunityEngagements />
         <ContactMe />
       </main>
-      {/* <Footer color="white" /> */}
+      <Footer color="white" />
     </div>
   );
 };
