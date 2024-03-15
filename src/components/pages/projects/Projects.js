@@ -26,10 +26,11 @@ const Projects = () => {
 
   return (
     <div className="projects">
-      <Header />
+      <Header color="white" backgroundColor="#2e3047"/>
       <main className="projects--main">
         <img src={nightsky} alt="" className="projects--background" />
         <div className="projects--heading">SHEPE'S PROJECTS</div>
+        <div className="projects--subheading">A sample collection of Shepe's projects. Click to see details!</div>
         <div className="projects--grid">
           {/* {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
             <Project />
@@ -55,7 +56,7 @@ const Projects = () => {
           })}
         </div>
       </main>
-      <Footer />
+      <Footer color="white" backgroundColor="#2e3047"/>
     </div>
   );
 };

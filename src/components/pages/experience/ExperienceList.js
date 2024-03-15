@@ -7,12 +7,12 @@ import "./ExperienceList.css";
 const ExperienceList = () => {
   return (
     <div className="experienceList">
-      <Header />
+      <Header color="white" backgroundColor="#2e3047"/>
       <div className="experienceList--main">
         <img src={nightsky} alt="" className="achievements--background" />
         <div className="achievements--heading">SHEPE'S EXPERIENCE</div>
       </div>
-      <Footer />
+      <Footer color="white" backgroundColor="#2e3047"/>
     </div>
   );
 };

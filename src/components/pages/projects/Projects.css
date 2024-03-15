@@ -6,8 +6,9 @@
 .projects--main {
   /* height: 100vh; */
   padding: 50px 0;
-  background-color: rgba(29, 30, 42, 0.7);
   position: relative;
+  background-color: rgba(29, 30, 42, 0.7);
+  min-height: 100vh;
 }
 
 .projects--background {
@@ -25,7 +26,13 @@
   /* color: white; */
   color: #ffcc55;
   font-family: "Protest Strike", sans-serif;
-  margin: 10px 0 40px 100px
+  margin: 10px 0 -10px 100px
+}
+
+.projects--subheading {
+  margin: 10px 0 60px 100px;
+  color: rgb(196, 196, 196);
+  font-size: 20px;
 }
 
 .projects--grid {

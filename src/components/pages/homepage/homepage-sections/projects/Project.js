@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Project.css";
 import { listAll, ref, getDownloadURL } from "firebase/storage";
 import { colRefImages } from "../../../../../firebase";
+import { useNavigate } from "react-router";
 
 const Project = (props) => {
   const [image, setImage] = useState("");
@@ -14,10 +15,16 @@ const Project = (props) => {
     });
   });
 
+  const navigate = useNavigate()
+
+  const HandleSelectedProjectClicked = () => {
+    navigate("/projects")
+  }
+
   return (
     <>
       {image !== "" && props.name && props.type && props.overview ? (
-        <div className="selectedProject">
+        <div className="selectedProject" onClick={HandleSelectedProjectClicked}>
           <div className="selectedProject--image_container">
             <img src={image} alt="" className="selectedProject--image" />
           </div>

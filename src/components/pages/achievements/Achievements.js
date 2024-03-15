@@ -8,7 +8,7 @@ import Achievement from "./Achievement";
 const Achievements = () => {
   return (
     <div className="achievements">
-      <Header />
+      <Header color="white" backgroundColor="#2e3047"/>
       <div className="achievements--main">
         <img src={nightsky} alt="" className="achievements--background" />
         <div className="achievements--heading">SHEPE'S ACHIEVEMENTS</div>
@@ -18,7 +18,7 @@ const Achievements = () => {
           <Achievement />
         </div>
       </div>
-      <Footer />
+      <Footer color="white" backgroundColor="#2e3047"/>
     </div>
   );
 };

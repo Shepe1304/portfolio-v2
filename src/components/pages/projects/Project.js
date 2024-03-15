@@ -4,6 +4,7 @@ import "./Project.css"
 import { listAll } from 'firebase/storage';
 import { colRefImages } from '../../../firebase';
 import { getDownloadURL } from 'firebase/storage';
+import { useNavigate } from 'react-router';
 
 const Project = (props) => {
 
@@ -17,11 +18,17 @@ const Project = (props) => {
     });
   });
 
+  const navigate = useNavigate();
+
+  const HandleProjectClicked = () => {
+    navigate("/projects/" + `${props.id}`);
+  }
+
   return (
 
     <>
       {image !== "" && props.name && props.type && props.overview ? (
-        <div className="project">
+        <div className="project" onClick={HandleProjectClicked}>
           <div className="project--image_container">
             <img src={image} alt="" className="project--image" />
           </div>

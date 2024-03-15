@@ -13,7 +13,7 @@ import ContactMe from "./homepage-sections/contact-form/ContactMe";
 const homepage = () => {
   return (
     <div className="homepage">
-      <Header color="white" />
+      <Header color="white" backgroundColor="#2e3047"/>
       <main className="homepage--main">
         <img src={nightsky} alt="" className="homepage--background" />
         <Intro />
@@ -23,7 +23,7 @@ const homepage = () => {
         <CommunityEngagements />
         <ContactMe />
       </main>
-      <Footer color="white" />
+      <Footer color="white" backgroundColor="#2e3047"/>
     </div>
   );
 };

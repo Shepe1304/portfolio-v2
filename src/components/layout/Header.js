@@ -32,7 +32,7 @@ const Header = (props) => {
 
   return (
     <>
-      <header className="header" style={{ color: props.color }}>
+      <header className="header" style={{ color: props.color, backgroundColor: props.backgroundColor }}>
         <div className="header--logo_container" onClick={HandleLogoClick}>
           <img src={shepeLogo} alt="" className="header--logo" />
           <div className="header--logo_text">Shepe</div>

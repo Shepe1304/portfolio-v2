@@ -7,12 +7,12 @@ import nightsky from "../../assets/images/nightsky.png";
 const Resume = () => {
   return (
     <div className="resume">
-      <Header />
+      <Header color="white" backgroundColor="#2e3047"/>
       <div className="resume--main">
         <img src={nightsky} alt="" className="homepage--background" />
         <div className="resume--heading">SHEPE'S RESUME</div>
       </div>
-      <Footer />
+      <Footer color="white" backgroundColor="#2e3047"/>
     </div>
   );
 };

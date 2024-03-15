@@ -3,6 +3,7 @@ import "./Projects.css";
 import Project from "./Project";
 import { colRefProjects } from "../../../../../firebase";
 import { getDocs } from "firebase/firestore";
+import { useNavigate } from "react-router";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -27,12 +28,18 @@ const Projects = () => {
     getProjects();
   }, []);
 
+  const navigate = useNavigate()
+
+  const HandleSeeMoreClicked = () => {
+    navigate("/projects")
+  }
+
   return (
     <div className="selectedProjects">
       {/* <div className="selectedProjects--section"> */}
       <div className="selectedProjects--headings">
         <div className="selectedProjects--heading">SELECTED WORK</div>
-        <div className="selectedProjects--see_more">See more &#x2192;</div>
+        <div className="selectedProjects--see_more" onClick={HandleSeeMoreClicked}>See more &#x2192;</div>
       </div>
       <div className="selectedProjects--project_list">
         {projects.map((project) => {

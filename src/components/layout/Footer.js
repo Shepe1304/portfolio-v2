@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = (props) => {
   return (
-    <footer className="footer" style={{ color: props.color }}>
+    <footer className="footer" style={{ color: props.color, backgroundColor: props.backgroundColor }}>
       <div className="footer_text">
         <span style={{fontSize: "25px"}}>&#169;</span> 2024 Quynh Giang Ho (Shepe)
       </div>
