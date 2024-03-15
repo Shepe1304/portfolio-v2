@@ -17,7 +17,7 @@ const Projects = () => {
       setProjects(
         data.docs.map((doc) => ({
           ...doc.data(),
-          // id: doc.id?\
+          // id: doc.id?
         }))        
       )
     }
@@ -54,6 +54,10 @@ const Projects = () => {
               />
             )
           })}
+          {/* boilerplate projects to see the grid layout */}
+          <Project />
+          <Project />
+          <Project />
         </div>
       </main>
       <Footer color="white" backgroundColor="#2e3047"/>
