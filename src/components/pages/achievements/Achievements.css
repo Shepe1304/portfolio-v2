@@ -1,0 +1,32 @@
+.achievements {
+  font-family: "Roboto Mono", monospace;
+  color: white;
+}
+
+.achievements--main {
+  height: 100vh;
+  padding: 50px 0;
+  background-color: rgba(29, 30, 42, 0.7);
+  position: relative;
+}
+
+.achievements--background {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.achievements--heading {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 40px;
+}
+
+.achievements--grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

@@ -1,16 +1,16 @@
-.projects {
+.experienceList {
   font-family: "Roboto Mono", monospace;
   color: white;
 }
 
-.projects--main {
-  /* height: 100vh; */
+.experienceList--main {
+  height: 100vh;
   padding: 50px 0;
   background-color: rgba(29, 30, 42, 0.7);
   position: relative;
 }
 
-.projects--background {
+.experienceList--background {
   position: fixed;
   width: 100%;
   top: 0;
@@ -20,18 +20,15 @@
   z-index: -1;
 }
 
-.projects--heading {
-  font-size: 80px;
-  /* color: white; */
-  color: #ffcc55;
+.experienceList--heading {
+  font-size: 40px;
+  color: white;
   font-family: "Protest Strike", sans-serif;
-  margin: 10px 0 40px 100px
 }
 
-.projects--grid {
+.experienceList--grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* padding: 0 100px; */
-  padding: 0 20px;
-  gap: 10px;
+  padding: 0 100px;
+  gap: 30px;
 }

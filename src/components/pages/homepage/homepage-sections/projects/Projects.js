@@ -10,12 +10,19 @@ const Projects = () => {
   useEffect(() => {
     const getProjects = async () => {
       const data = await getDocs(colRefProjects);
-      setProjects(
-        data.docs.map((doc) => ({
-          ...doc.data(),
-          // id: doc.id,
-        }))
-      );
+      let tmpProjects = []
+      data.docs.map((doc) => {
+        if (doc.data().selected) {
+          tmpProjects = [...tmpProjects, doc.data()]
+        }
+      })
+      // setProjects(
+      //   data.docs.map((doc) => ({
+      //     ...doc.data(),
+      //     // id: doc.id,
+      //   }))
+      // );
+      setProjects(tmpProjects)
     };
     getProjects();
   }, []);
