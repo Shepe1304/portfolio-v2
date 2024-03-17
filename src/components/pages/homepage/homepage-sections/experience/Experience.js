@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Experience.css";
 import { listAll, ref, getDownloadURL } from "firebase/storage";
 import { colRefImages } from "../../../../../firebase";
+import { useNavigate } from "react-router";
 
 const SelectedExperience = (props) => {
   const [image, setImage] = useState("");
@@ -14,18 +15,22 @@ const SelectedExperience = (props) => {
     });
   });
 
+  const navigate = useNavigate()
+  
+  const HandleSelectedExperienceClicked = () => {
+    navigate("/experience")
+  }
+
   return (
-    <div className="selectedExperience">
+    <div className="selectedExperience" onClick={HandleSelectedExperienceClicked}>
       <div className="selectedExperience--image_container">
-        <img src="" alt="" className="selectedExperience--image" />
+        <img src={image} alt="" className="selectedExperience--image" />
       </div>
       <div className="selectedExperience--texts">
-        <div className="selectedExperience--name">DESLab</div>
-        <div className="selectedExperience--type">Research Internship</div>
+        <div className="selectedExperience--name">{props.name}</div>
+        <div className="selectedExperience--type">{props.type}</div>
         <div className="selectedExperience--description">
-          Researched at DESLab, Electronics and Telecommunication Department,
-          VNUHCM-University of Science, under Dr. Duc-Hung Le's mentorship in
-          PIISE Research Symposium.
+          {props.description}
         </div>
       </div>
     </div>

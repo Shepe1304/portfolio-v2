@@ -19,12 +19,12 @@ const ProjectDetails = (props) => {
         <div className="projectDetails--backButton" onClick={HandleBackButtonClicked} style={{marginBottom: "20px"}}><span style={{fontSize: "30px", marginBottom: "5px"}}>&#x2190;</span> <span style={{fontSize: "20px"}}>Back to Projects</span></div>
         <div className="projectDetails--name">{props.name}</div>
         <>
-          {props.type && props.type != "" ? (
+          {props.type && props.type !== "" ? (
             <div className="projectDetails--type">{props.type}</div>
           ) : null}
         </>
         <div className="projectDetails--sections">
-          {props.topic && props.topic != "" ? (
+          {props.topic && props.topic !== "" ? (
             <div className="projectDetails--section">
               <div className="projectDetails--sectionHeading">
                 Research Topic
@@ -34,17 +34,27 @@ const ProjectDetails = (props) => {
               </div>
             </div>
           ) : null}
-          {props.overview && props.overview != "" ? (
+          {props.topic && props.topic !== "" ? (
             <div className="projectDetails--section">
               <div className="projectDetails--sectionHeading">
-                Project Overview
+                Research Abstract
+              </div>
+              <div className="projectDetails--sectionContent">
+                {props.abstract}
+              </div>
+            </div>
+          ) : null}
+          {props.overview && props.overview !== "" ? (
+            <div className="projectDetails--section">
+              <div className="projectDetails--sectionHeading">
+                Overview
               </div>
               <div className="projectDetails--sectionContent">
                 {props.overview}
               </div>
             </div>
           ) : null}
-          {props.background && props.background != "" ? (
+          {props.background && props.background !== "" ? (
             <div className="projectDetails--section">
               <div className="projectDetails--sectionHeading">
                 Background Information
@@ -54,7 +64,7 @@ const ProjectDetails = (props) => {
               </div>
             </div>
           ) : null}
-          {props.awards && props.awards != "" ? (
+          {props.awards && props.awards !== "" ? (
             <div className="projectDetails--section">
               <div className="projectDetails--sectionHeading">Awards</div>
               <div className="projectDetails--sectionContent">
@@ -62,9 +72,9 @@ const ProjectDetails = (props) => {
               </div>
             </div>
           ) : null}
-          {props.website && props.website != "" ? (
+          {props.website && props.website !== "" ? (
             <div className="projectDetails--section">
-              <a href={`${props.website}`} target="_blank">
+              <a href={`${props.website}`} target="_blank" rel="noreferrer">
                 <button className="projectDetails--sectionHeading">
                   Website Link
                 </button>
@@ -72,9 +82,9 @@ const ProjectDetails = (props) => {
               {/* <div className="projectDetails--sectionContent">{props.pdf}</div> */}
             </div>
           ) : null}
-          {props.demo && props.demo != "" ? (
+          {props.demo && props.demo !== "" ? (
             <div className="projectDetails--section">
-              <a href={`${props.demo}`} target="_blank">
+              <a href={`${props.demo}`} target="_blank" rel="noreferrer">
                 <button className="projectDetails--sectionHeading">
                   Demonstration Video
                 </button>
@@ -82,9 +92,9 @@ const ProjectDetails = (props) => {
               {/* <div className="projectDetails--sectionContent">{props.pdf}</div> */}
             </div>
           ) : null}
-          {props.github && props.github != "" ? (
+          {props.github && props.github !== "" ? (
             <div className="projectDetails--section">
-              <a href={`${props.github}`} target="_blank">
+              <a href={`${props.github}`} target="_blank" rel="noreferrer">
                 <button className="projectDetails--sectionHeading">
                   GitHub Repository
                 </button>
@@ -92,9 +102,9 @@ const ProjectDetails = (props) => {
               {/* <div className="projectDetails--sectionContent">{props.pdf}</div> */}
             </div>
           ) : null}
-          {props.documentation && props.documentation != "" ? (
+          {props.documentation && props.documentation !== "" ? (
             <div className="projectDetails--section">
-              <a href={`${props.documentation}`} target="_blank">
+              <a href={`${props.documentation}`} target="_blank" rel="noreferrer">
                 <button className="projectDetails--sectionHeading">
                   Documentation
                 </button>
@@ -102,9 +112,9 @@ const ProjectDetails = (props) => {
               {/* <div className="projectDetails--sectionContent">{props.pdf}</div> */}
             </div>
           ) : null}
-          {props.pdf && props.pdf != "" ? (
+          {props.pdf && props.pdf !== "" ? (
             <div className="projectDetails--section">
-              <a href={`${props.pdf}`} target="_blank">
+              <a href={`${props.pdf}`} target="_blank" rel="noreferrer">
                 <button className="projectDetails--sectionHeading">
                   Download Research Report
                 </button>

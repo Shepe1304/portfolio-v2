@@ -43,13 +43,13 @@ const Header = (props) => {
             <div className="header--button_slide"></div>
             <div className="header--button_slide2"></div>
           </div>
-          <div className="header--button" onClick={HandleAchievementsClick}>
-            <div className="header--button_text">ACHIEVEMENTS</div>
+          <div className="header--button" onClick={HandleExperienceClick}>
+            <div className="header--button_text">EXPERIENCE</div>
             <div className="header--button_slide"></div>
             <div className="header--button_slide2"></div>
           </div>
-          <div className="header--button" onClick={HandleExperienceClick}>
-            <div className="header--button_text">EXPERIENCE</div>
+          <div className="header--button" onClick={HandleAchievementsClick}>
+            <div className="header--button_text">ACHIEVEMENTS</div>
             <div className="header--button_slide"></div>
             <div className="header--button_slide2"></div>
           </div>

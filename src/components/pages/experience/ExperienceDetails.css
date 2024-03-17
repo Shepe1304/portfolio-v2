@@ -1,0 +1,66 @@
+.experienceDetails {
+  background-color: lightyellow;
+  /* height: 100vh; */
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+}
+
+.experienceDetails--main {
+  padding: 40px;
+  min-height: 80vh;
+}
+
+.experienceDetails--backButton {
+  cursor: pointer;
+  /* display: inline-block; */
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.experienceDetails--backButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.experienceDetails--name {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 80px;
+}
+
+.experienceDetails--type {
+  font-size: 30px;
+  color: gray;
+  padding: 0 40px;
+}
+
+.experienceDetails--sections {
+  padding: 20px 150px 20px 40px;
+}
+
+.experienceDetails--section {
+  margin: 20px 0;
+}
+
+.experienceDetails--sectionHeading {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.experienceDetails button {
+  background-color: inherit;
+  /* width: 100%; */
+  padding: 10px;
+  border: 5px solid black;
+  transition: 0.05s;
+  transition-property: background-color, color;
+}
+
+.experienceDetails button:hover {
+  background-color: black;
+  color: white;
+}

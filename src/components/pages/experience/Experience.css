@@ -1,4 +1,4 @@
-.selectedExperience {
+.experience {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -8,7 +8,7 @@
 
 /* image */
 
-.selectedExperience--image_container {
+.experience--image_container {
   background-color: darkcyan;
   width: 200px;
   height: 200px;
@@ -19,29 +19,29 @@
   overflow: hidden;
 }
 
-.selectedExperience--image_container img {
+.experience--image_container img {
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.selectedExperience--texts {
+.experience--texts {
   width: 350px;
 }
 
-.selectedExperience--description {
+.experience--description {
   font-size: 15px;
   font-weight: 200;
 }
 
 /* texts */
 
-.selectedExperience--name {
+.experience--name {
   font-size: 20px;
   font-weight: 700;
 }
 
-.selectedExperience--type {
+.experience--type {
   font-size: 18px;
   margin: 8px 0;
 }

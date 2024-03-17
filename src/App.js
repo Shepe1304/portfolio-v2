@@ -6,11 +6,14 @@ import Achievements from "./components/pages/achievements/Achievements";
 import ExperienceList from "./components/pages/experience/ExperienceList";
 import Resume from "./components/pages/resume/Resume";
 import { colRefProjects } from "./firebase";
+import { colRefExperienceList } from "./firebase";
 import { getDocs } from "firebase/firestore";
 import ProjectDetails from "./components/pages/projects/ProjectDetails";
+import ExperienceDetails from "./components/pages/experience/ExperienceDetails";
 
 function App() {
   const [projects, setProjects] = useState([]);
+  const [experienceList, setExperienceList] = useState([]);
 
   useEffect(() => {
     const getProjects = async () => {
@@ -23,6 +26,17 @@ function App() {
       );
     };
     getProjects();
+
+    const getExperienceList = async () => {
+      const data = await getDocs(colRefExperienceList);
+      setExperienceList(
+        data.docs.map((doc) => ({
+          ...doc.data(),
+          // id: doc.id?\
+        }))
+      );
+    };
+    getExperienceList();
   }, []);
 
   return (
@@ -55,6 +69,27 @@ function App() {
                   type={project.type}
                   website={project.website}
                   background={project.background}
+                />
+              }
+            />
+          );
+        })}
+        {experienceList.map((experience) => {
+          return (
+            <Route
+              exact
+              path={`${"/experience/" + experience.id}`}
+              element={
+                <ExperienceDetails
+                  description={experience.description}
+                  id={experience.id}
+                  image={experience.image}
+                  name={experience.name}
+                  organizationWebsite={experience.organizationWebsite}
+                  selected={experience.selected}
+                  skillsAcquired={experience.skillsAcquired}
+                  type={experience.type}
+                  role={experience.role}
                 />
               }
             />

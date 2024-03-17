@@ -11,35 +11,40 @@ const Projects = () => {
   useEffect(() => {
     const getProjects = async () => {
       const data = await getDocs(colRefProjects);
-      let tmpProjects = []
+      let tmpProjects = [];
       data.docs.map((doc) => {
         if (doc.data().selected) {
-          tmpProjects = [...tmpProjects, doc.data()]
+          tmpProjects = [...tmpProjects, doc.data()];
         }
-      })
+      });
       // setProjects(
       //   data.docs.map((doc) => ({
       //     ...doc.data(),
       //     // id: doc.id,
       //   }))
       // );
-      setProjects(tmpProjects)
+      setProjects(tmpProjects);
     };
     getProjects();
   }, []);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const HandleSeeMoreClicked = () => {
-    navigate("/projects")
-  }
+    navigate("/projects");
+  };
 
   return (
     <div className="selectedProjects">
       {/* <div className="selectedProjects--section"> */}
       <div className="selectedProjects--headings">
         <div className="selectedProjects--heading">SELECTED WORK</div>
-        <div className="selectedProjects--see_more" onClick={HandleSeeMoreClicked}>See more &#x2192;</div>
+        <div
+          className="selectedProjects--see_more"
+          onClick={HandleSeeMoreClicked}
+        >
+          See more &#x2192;
+        </div>
       </div>
       <div className="selectedProjects--project_list">
         {projects.map((project) => {
