@@ -5,7 +5,7 @@ import silvertrophy from "../../../../assets/images/silvertrophy.png"
 import bronzetrophy from "../../../../assets/images/bronzetrophy.png"
 import metaltrophy from "../../../../assets/images/metaltrophy.png"
 
-const Achievement = () => {
+const Achievement = (props) => {
   const [image, setImage] = useState("");
 
   // listAll(colRefImages).then((response) => {
@@ -25,15 +25,14 @@ const Achievement = () => {
         <div className="selectedAchievemenet--first_line">
           <div className="selectedAchievement--trophy_container">
             <img src={goldtrophy} alt="" className="selectedAchievement--trophy" />
-            <div className="selectedAchievement--trophy_tag">FIRST PRIZE</div>
+            {/* <div className="selectedAchievement--trophy_tag">FIRST PRIZE</div> */}
+            <div className="selectedAchievement--trophy_tag">{props.achievement.prize}</div>
           </div>
-          <div className="selectedAchievement--name">DESLab</div>
+          <div className="selectedAchievement--name">{props.achievement.contest}</div>
         </div>
-        <div className="selectedAchievement--type">Research Internship</div>
+        <div className="selectedAchievement--sector">{props.achievement.sector}</div>
         <div className="selectedAchievement--description">
-          Researched at DESLab, Electronics and Telecommunication Department,
-          VNUHCM-University of Science, under Dr. Duc-Hung Le's mentorship in
-          PIISE Research Symposium.
+          {props.achievement.description}
         </div>
       </div>
     </div>

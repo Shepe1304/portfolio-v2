@@ -13,7 +13,7 @@ const Project = (props) => {
   listAll(colRefImages).then((response) => {
     response.items.forEach((item) => {
       getDownloadURL(item).then((url) => {
-        if (item.name === props.image) setImage(url);
+        if (item.name === props.project.image) setImage(url);
       });
     });
   });
@@ -21,21 +21,21 @@ const Project = (props) => {
   const navigate = useNavigate();
 
   const HandleProjectClicked = () => {
-    navigate("/projects/" + `${props.id}`);
+    navigate("/projects/" + `${props.project.id}`);
   }
 
   return (
 
     <>
-      {image !== "" && props.name && props.type && props.overview ? (
+      {image !== "" && props.project.name && props.project.type && props.project.overview ? (
         <div className="project" onClick={HandleProjectClicked}>
           <div className="project--image_container">
             <img src={image} alt="" className="project--image" />
           </div>
           <div className="project--descriptions">
-            <div className="project--name">{props.name}</div>
-            <div className="project--type">{props.type}</div>
-            <div className="project--overview">{props.overview}</div>
+            <div className="project--name">{props.project.name}</div>
+            <div className="project--type">{props.project.type}</div>
+            <div className="project--overview">{props.project.overview}</div>
           </div>
         </div>
       ) : (
@@ -51,17 +51,6 @@ const Project = (props) => {
         </div>
       )}
     </>
-
-    // <div className='project'>
-    //   <div className="project--image_container">
-    //         <img src="" alt="" className="project--image" />
-    //       </div>
-    //       <div className="project--descriptions">
-    //         <div className="project--name">Cannot load data from Firebase</div>
-    //         <div className="project--type">Cannot load data from Firebase</div>
-    //         <div className="project--overview">Cannot load data from Firebase</div>
-    //       </div>
-    // </div>
   );
 };
 

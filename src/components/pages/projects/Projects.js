@@ -17,7 +17,6 @@ const Projects = () => {
       setProjects(
         data.docs.map((doc) => ({
           ...doc.data(),
-          // id: doc.id?
         }))        
       )
     }
@@ -32,32 +31,13 @@ const Projects = () => {
         <div className="projects--heading">SHEPE'S PROJECTS</div>
         <div className="projects--subheading">A sample collection of Shepe's projects. Click to see details!</div>
         <div className="projects--grid">
-          {/* {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-            <Project />
-          ))} */}
           {projects.map((project) => {
             return (
               <Project
-                abstract={project.abstract}
-                awards={project.awards}
-                demo={project.demo}
-                github={project.github}
-                id={project.id}
-                image={project.image}
-                name={project.name}
-                overview={project.overview}
-                pdf={project.pdf}
-                selected={project.selected}
-                topic={project.topic}
-                type={project.type}
-                website={project.website}
+                project={project}
               />
             )
           })}
-          {/* boilerplate projects to see the grid layout */}
-          <Project />
-          <Project />
-          <Project />
         </div>
       </main>
       <Footer color="white" backgroundColor="#2e3047"/>

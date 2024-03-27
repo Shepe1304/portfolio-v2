@@ -54,21 +54,7 @@ function App() {
               path={`${"/projects/" + project.id}`}
               element={
                 <ProjectDetails
-                  abstract={project.abstract}
-                  awards={project.awards}
-                  demo={project.demo}
-                  github={project.github}
-                  id={project.id}
-                  image={project.image}
-                  name={project.name}
-                  overview={project.overview}
-                  pdf={project.pdf}
-                  documentation={project.documentation}
-                  selected={project.selected}
-                  topic={project.topic}
-                  type={project.type}
-                  website={project.website}
-                  background={project.background}
+                  project = {project}
                 />
               }
             />
@@ -81,15 +67,7 @@ function App() {
               path={`${"/experience/" + experience.id}`}
               element={
                 <ExperienceDetails
-                  description={experience.description}
-                  id={experience.id}
-                  image={experience.image}
-                  name={experience.name}
-                  organizationWebsite={experience.organizationWebsite}
-                  selected={experience.selected}
-                  skillsAcquired={experience.skillsAcquired}
-                  type={experience.type}
-                  role={experience.role}
+                  experience={experience}
                 />
               }
             />

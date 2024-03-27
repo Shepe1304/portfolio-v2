@@ -4,10 +4,23 @@
 }
 
 .achievements--main {
-  height: 100vh;
+  min-height: 100vh;
   padding: 50px 0;
   background-color: rgba(29, 30, 42, 0.7);
   position: relative;
+}
+
+.achievements--heading {
+  font-size: 80px;
+  color: #ffcc55;
+  font-family: "Protest Strike", sans-serif;
+  margin: 10px 0 -10px 100px
+}
+
+.achievements--subheading {
+  margin: 10px 0 60px 100px;
+  color: rgb(196, 196, 196);
+  font-size: 20px;
 }
 
 .achievements--background {
@@ -20,13 +33,9 @@
   z-index: -1;
 }
 
-.achievements--heading {
-  font-family: "Protest Strike", sans-serif;
-  font-size: 40px;
-}
-
 .achievements--grid {
   display: flex;
+  padding-left: 100px;
   flex-direction: column;
   gap: 30px;
 }

@@ -25,45 +25,45 @@ const ExperienceDetails = (props) => {
           </span>{" "}
           <span style={{ fontSize: "20px" }}>Back to Work Experience</span>
         </div>
-        <div className="experienceDetails--name">{props.name}</div>
+        <div className="experienceDetails--name">{props.experience.name}</div>
         <>
-          {props.type && props.type !== "" ? (
-            <div className="experienceDetails--type">{props.type}</div>
+          {props.experience.type && props.experience.type !== "" ? (
+            <div className="experienceDetails--type">{props.experience.type}</div>
           ) : null}
         </>
         <div className="experienceDetails--sections">
-          {props.role && props.role !== "" ? (
+          {props.experience.role && props.experience.role !== "" ? (
             <div className="experienceDetails--section">
               <div className="experienceDetails--sectionHeading">Role Held</div>
               <div className="experienceDetails--sectionContent">
-                {props.role}
+                {props.experience.role}
               </div>
             </div>
           ) : null}
-          {props.description && props.description !== "" ? (
+          {props.experience.description && props.experience.description !== "" ? (
             <div className="experienceDetails--section">
               <div className="experienceDetails--sectionHeading">
                 Description
               </div>
               <div className="experienceDetails--sectionContent">
-                {props.description}
+                {props.experience.description}
               </div>
             </div>
           ) : null}
-          {props.skillsAcquired && props.skillsAcquired !== "" ? (
+          {props.experience.skillsAcquired && props.experience.skillsAcquired !== "" ? (
             <div className="experienceDetails--section">
               <div className="experienceDetails--sectionHeading">
                 What I learned
               </div>
               <div className="experienceDetails--sectionContent">
-                {props.skillsAcquired}
+                {props.experience.skillsAcquired}
               </div>
             </div>
           ) : null}
-          {props.organizationWebsite && props.organizationWebsite !== "" ? (
+          {props.experience.organizationWebsite && props.experience.organizationWebsite !== "" ? (
             <div className="experienceDetails--section">
               <a
-                href={`${props.organizationWebsite}`}
+                href={`${props.experience.organizationWebsite}`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -71,33 +71,33 @@ const ExperienceDetails = (props) => {
                   Organization Website
                 </button>
               </a>
-              {/* <div className="experienceDetails--sectionContent">{props.pdf}</div> */}
+              {/* <div className="experienceDetails--sectionContent">{props.experience.pdf}</div> */}
             </div>
           ) : null}
-          {props.demo && props.demo !== "" ? (
+          {props.experience.demo && props.experience.demo !== "" ? (
             <div className="experienceDetails--section">
-              <a href={`${props.demo}`} target="_blank" rel="noreferrer">
+              <a href={`${props.experience.demo}`} target="_blank" rel="noreferrer">
                 <button className="experienceDetails--sectionHeading">
                   Demonstration Video
                 </button>
               </a>
-              {/* <div className="experienceDetails--sectionContent">{props.pdf}</div> */}
+              {/* <div className="experienceDetails--sectionContent">{props.experience.pdf}</div> */}
             </div>
           ) : null}
-          {props.github && props.github !== "" ? (
+          {props.experience.github && props.experience.github !== "" ? (
             <div className="experienceDetails--section">
-              <a href={`${props.github}`} target="_blank" rel="noreferrer">
+              <a href={`${props.experience.github}`} target="_blank" rel="noreferrer">
                 <button className="experienceDetails--sectionHeading">
                   GitHub Repository
                 </button>
               </a>
-              {/* <div className="experienceDetails--sectionContent">{props.pdf}</div> */}
+              {/* <div className="experienceDetails--sectionContent">{props.experience.pdf}</div> */}
             </div>
           ) : null}
-          {props.documentation && props.documentation !== "" ? (
+          {props.experience.documentation && props.experience.documentation !== "" ? (
             <div className="experienceDetails--section">
               <a
-                href={`${props.documentation}`}
+                href={`${props.experience.documentation}`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -105,12 +105,12 @@ const ExperienceDetails = (props) => {
                   Documentation
                 </button>
               </a>
-              {/* <div className="experienceDetails--sectionContent">{props.pdf}</div> */}
+              {/* <div className="experienceDetails--sectionContent">{props.experience.pdf}</div> */}
             </div>
           ) : null}
-          {props.pdf && props.pdf !== "" ? (
+          {props.experience.pdf && props.experience.pdf !== "" ? (
             <div className="experienceDetails--section">
-              <a href={`${props.pdf}`} target="_blank" rel="noreferrer">
+              <a href={`${props.experience.pdf}`} target="_blank" rel="noreferrer">
                 <button className="experienceDetails--sectionHeading">
                   Download Research Report
                 </button>

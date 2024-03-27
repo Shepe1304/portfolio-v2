@@ -34,14 +34,7 @@ const ExperienceList = () => {
           {
             experienceList.map((experience) => {
               return <Experience 
-                description={experience.description}
-                id={experience.id}
-                image={experience.image}
-                name={experience.name}
-                organizationWebsite={experience.organizationWebsite}
-                selected={experience.selected}
-                skillsAcquired={experience.skillsAcquired}
-                type={experience.type}
+                experience={experience}
               />
             })
           }

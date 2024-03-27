@@ -10,7 +10,7 @@ const SelectedExperience = (props) => {
   listAll(colRefImages).then((response) => {
     response.items.forEach((item) => {
       getDownloadURL(item).then((url) => {
-        if (item.name === props.image) setImage(url);
+        if (item.name === props.experience.image) setImage(url);
       });
     });
   });
@@ -27,10 +27,10 @@ const SelectedExperience = (props) => {
         <img src={image} alt="" className="selectedExperience--image" />
       </div>
       <div className="selectedExperience--texts">
-        <div className="selectedExperience--name">{props.name}</div>
-        <div className="selectedExperience--type">{props.type}</div>
+        <div className="selectedExperience--name">{props.experience.name}</div>
+        <div className="selectedExperience--type">{props.experience.type}</div>
         <div className="selectedExperience--description">
-          {props.description}
+          {props.experience.description}
         </div>
       </div>
     </div>

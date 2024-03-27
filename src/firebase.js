@@ -21,5 +21,6 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const colRefProjects = collection(db, "projects");
 export const colRefExperienceList = collection(db, "experience");
+export const colRefAchievements = collection(db, "achievements");
 export const storage = getStorage(app);
 export const colRefImages = ref(storage, "images")
