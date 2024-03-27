@@ -1,0 +1,92 @@
+.achievementDetails {
+  background-color: rgb(104, 222, 216);
+  /* height: 100vh; */
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+}
+
+.achievementDetails--main {
+  padding: 40px;
+  min-height: 80vh;
+}
+
+.achievementDetails--backButton {
+  cursor: pointer;
+  /* display: inline-block; */
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.1s, color 0.1s;
+}
+
+.achievementDetails--backButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.achievementDetails--name {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 80px;
+}
+
+.achievementDetails--sector, .achievementDetails--year {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(67, 79, 79);
+  margin-left: 30px;
+}
+
+.achievementDetails--trophy_container {
+  font-size: 20px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  margin: 10px 0;
+  text-transform: uppercase;
+  background-color: darkcyan;
+  padding: 10px 12px 10px 10px;
+  border-radius: 8px;
+  margin-left: 30px;
+}
+
+.achievementDetails--trophy {
+  width: 25px;
+  height: 25px;
+}
+
+.achievementDetails--trophy_tag {
+  background-color: rgb(210, 193, 95);
+  /* color: black; */
+  border-radius: 10%;
+  padding: 2px 10px;
+}
+
+.achievementDetails--sections {
+  padding: 20px 150px 20px 40px;
+}
+
+.achievementDetails--section {
+  margin: 20px 0;
+}
+
+.achievementDetails--sectionHeading {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.achievementDetails button {
+  background-color: inherit;
+  /* width: 100%; */
+  padding: 10px;
+  border: 5px solid black;
+  transition: 0.05s;
+  transition-property: background-color, color;
+}
+
+.achievementDetails button:hover {
+  background-color: black;
+  color: white;
+}

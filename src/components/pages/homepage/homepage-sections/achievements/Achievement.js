@@ -29,6 +29,7 @@ const Achievement = (props) => {
             <div className="selectedAchievement--trophy_tag">{props.achievement.prize}</div>
           </div>
           <div className="selectedAchievement--name">{props.achievement.contest}</div>
+          <div className="selectedAchievement--year">{props.achievement.year}</div>
         </div>
         <div className="selectedAchievement--sector">{props.achievement.sector}</div>
         <div className="selectedAchievement--description">
