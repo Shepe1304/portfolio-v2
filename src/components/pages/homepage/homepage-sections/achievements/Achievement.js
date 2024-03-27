@@ -4,9 +4,16 @@ import goldtrophy from "../../../../assets/images/goldtrophy.png"
 import silvertrophy from "../../../../assets/images/silvertrophy.png"
 import bronzetrophy from "../../../../assets/images/bronzetrophy.png"
 import metaltrophy from "../../../../assets/images/metaltrophy.png"
+import { useNavigate } from "react-router";
 
 const Achievement = (props) => {
   const [image, setImage] = useState("");
+
+  const navigate = useNavigate()
+
+  const HandleAchievementClicked = () => {
+    navigate("/achievements");
+  }
 
   // listAll(colRefImages).then((response) => {
   //   response.items.forEach((item) => {
@@ -17,7 +24,7 @@ const Achievement = (props) => {
   // });
 
   return (
-    <div className="selectedAchievement">
+    <div className="selectedAchievement" onClick={HandleAchievementClicked}>
       <div className="selectedAchievement--image_container">
         <img src="" alt="" className="selectedAchievement--image" />
       </div>
