@@ -1,10 +1,18 @@
 import React from "react";
 import "./Achievement.css"
 import goldtrophy from "../../assets/images/goldtrophy.png";
+import { useNavigate } from "react-router";
 
 const Achievement = (props) => {
+
+  const navigate = useNavigate()
+
+  const HandleAchievementClicked = () => {
+    navigate("/achievements/" + `${props.achievement.id}`)
+  }
+
   return (
-    <div className="achievement">
+    <div className="achievement" onClick={HandleAchievementClicked}>
       <div className="achievement--image_grid">
         <div className="achievement--image_container" style={{backgroundColor:"darkred"}}>
           <img src="" alt="" className="achievement--image"/>
@@ -20,7 +28,7 @@ const Achievement = (props) => {
         </div>
       </div>
       <div className="achievement--texts">
-        <div className="achievemenet--first_line">
+        <div className="achievement--first_line">
           <div className="achievement--trophy_container">
             <img src={goldtrophy} alt="" className="achievement--trophy" />
             <div className="achievement--trophy_tag">{props.achievement.prize}</div>

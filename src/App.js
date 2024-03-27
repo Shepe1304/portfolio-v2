@@ -7,13 +7,16 @@ import ExperienceList from "./components/pages/experience/ExperienceList";
 import Resume from "./components/pages/resume/Resume";
 import { colRefProjects } from "./firebase";
 import { colRefExperienceList } from "./firebase";
+import { colRefAchievements } from "./firebase";
 import { getDocs } from "firebase/firestore";
 import ProjectDetails from "./components/pages/projects/ProjectDetails";
 import ExperienceDetails from "./components/pages/experience/ExperienceDetails";
+import AchievementDetails from "./components/pages/achievements/AchievementDetails";
 
 function App() {
   const [projects, setProjects] = useState([]);
   const [experienceList, setExperienceList] = useState([]);
+  const [achievements, setAchievements] = useState([]);
 
   useEffect(() => {
     const getProjects = async () => {
@@ -37,6 +40,17 @@ function App() {
       );
     };
     getExperienceList();
+
+    const getAchievements = async () => {
+      const data = await getDocs(colRefAchievements);
+      setAchievements(
+        data.docs.map((doc) => ({
+          ...doc.data(),
+          // id: doc.id?\
+        }))
+      );
+    };
+    getAchievements();
   }, []);
 
   return (
@@ -52,11 +66,7 @@ function App() {
             <Route
               exact
               path={`${"/projects/" + project.id}`}
-              element={
-                <ProjectDetails
-                  project = {project}
-                />
-              }
+              element={<ProjectDetails project={project} />}
             />
           );
         })}
@@ -65,11 +75,16 @@ function App() {
             <Route
               exact
               path={`${"/experience/" + experience.id}`}
-              element={
-                <ExperienceDetails
-                  experience={experience}
-                />
-              }
+              element={<ExperienceDetails experience={experience} />}
+            />
+          );
+        })}
+        {achievements.map((achievement) => {
+          return (
+            <Route
+              exact
+              path={`${"/achievements/" + achievement.id}`}
+              element={<AchievementDetails achievement={achievement} />}
             />
           );
         })}

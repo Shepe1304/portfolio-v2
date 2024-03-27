@@ -22,7 +22,7 @@ const Achievement = (props) => {
         <img src="" alt="" className="selectedAchievement--image" />
       </div>
       <div className="selectedAchievement--texts">
-        <div className="selectedAchievemenet--first_line">
+        <div className="selectedAchievement--first_line">
           <div className="selectedAchievement--trophy_container">
             <img src={goldtrophy} alt="" className="selectedAchievement--trophy" />
             {/* <div className="selectedAchievement--trophy_tag">FIRST PRIZE</div> */}
