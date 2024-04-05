@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../layout/Header";
 import Footer from "../../layout/Footer";
 import { useNavigate } from "react-router";
 import "./AchievementDetails.css";
 import goldtrophy from "../../assets/images/goldtrophy.png";
+import { colRefImages } from "../../../firebase";
+import { listAll, getDownloadURL } from "firebase/storage";
 
 const AchievementDetails = (props) => {
   const navigate = useNavigate();
@@ -11,6 +13,30 @@ const AchievementDetails = (props) => {
   const HandleBackButtonClicked = () => {
     navigate("/achievements");
   };
+
+  const [image0, setImage0] = useState("");
+  const [image1, setImage1] = useState("");
+  const [image2, setImage2] = useState("");
+  const [image3, setImage3] = useState("");
+
+  listAll(colRefImages).then((response) => {
+    response.items.forEach((item) => {
+      getDownloadURL(item).then((url) => {
+        if (item.name === props.achievement.images[0]) {
+          setImage0(url);
+        }
+        if (item.name === props.achievement.images[1]) {
+          setImage1(url);
+        }
+        if (item.name === props.achievement.images[2]) {
+          setImage2(url);
+        }
+        if (item.name === props.achievement.images[3]) {
+          setImage3(url);
+        }
+      });
+    });
+  }, []);
 
   return (
     <div className="achievementDetails">
@@ -43,7 +69,11 @@ const AchievementDetails = (props) => {
         <>
           {props.achievement.prize && props.achievement.prize !== "" ? (
             <div className="achievementDetails--trophy_container">
-              <img src={goldtrophy} alt="" className="achievementDetails--trophy" />
+              <img
+                src={goldtrophy}
+                alt=""
+                className="achievementDetails--trophy"
+              />
               <div className="achievementDetails--trophy_tag">
                 {props.achievement.prize}
               </div>
@@ -59,6 +89,45 @@ const AchievementDetails = (props) => {
               </div>
               <div className="achievementDetails--sectionContent">
                 {props.achievement.description}
+              </div>
+            </div>
+          ) : null}
+          {props.achievement.images && props.achievement.images.length != 0 ? (
+            <div className="achievementDetails--section">
+              <div className="achievementDetails--sectionHeading">Images</div>
+              <div className="achievementDetails--sectionContent achievementDetails--image_grid">
+                <div className="achievementDetails--image_row">
+                  {image0 !== "" ? (
+                    <img
+                      src={image0}
+                      alt=""
+                      className="achievementDetails--image"
+                    />
+                  ) : null}
+                  {image1 !== "" ? (
+                    <img
+                      src={image1}
+                      alt=""
+                      className="achievementDetails--image"
+                    />
+                  ) : null}
+                </div>
+                <div className="achievementDetails--image_row">
+                  {image0 !== "" ? (
+                    <img
+                      src={image2}
+                      alt=""
+                      className="achievementDetails--image"
+                    />
+                  ) : null}
+                  {image1 !== "" ? (
+                    <img
+                      src={image3}
+                      alt=""
+                      className="achievementDetails--image"
+                    />
+                  ) : null}
+                </div>
               </div>
             </div>
           ) : null}

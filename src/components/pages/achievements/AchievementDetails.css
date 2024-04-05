@@ -32,7 +32,8 @@
   font-size: 80px;
 }
 
-.achievementDetails--sector, .achievementDetails--year {
+.achievementDetails--sector,
+.achievementDetails--year {
   font-size: 30px;
   font-weight: bold;
   color: rgb(67, 79, 79);
@@ -65,7 +66,8 @@
 }
 
 .achievementDetails--sections {
-  padding: 20px 150px 20px 40px;
+  /* padding: 20px 150px 20px 40px; */
+  padding: 20px 0 20px 40px;
 }
 
 .achievementDetails--section {
@@ -75,6 +77,29 @@
 .achievementDetails--sectionHeading {
   font-size: 30px;
   font-weight: bolder;
+}
+
+.achievementDetails--image_grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: -40px;
+}
+
+.achievementDetails--image_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.achievementDetails--image {
+  width: 650px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: 10px;
 }
 
 .achievementDetails button {
