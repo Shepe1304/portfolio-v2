@@ -11,6 +11,7 @@ const Resume = () => {
       <div className="resume--main">
         <img src={nightsky} alt="" className="homepage--background" />
         <div className="resume--heading">SHEPE'S RESUME</div>
+        <div className="resume--download_button"></div>
       </div>
       <Footer color="white" backgroundColor="#2e3047"/>
     </div>
