@@ -5,6 +5,8 @@ import silvertrophy from "../../../../assets/images/silvertrophy.png"
 import bronzetrophy from "../../../../assets/images/bronzetrophy.png"
 import metaltrophy from "../../../../assets/images/metaltrophy.png"
 import { useNavigate } from "react-router";
+import { colRefImages } from "../../../../../firebase";
+import { listAll, getDownloadURL } from "firebase/storage";
 
 const Achievement = (props) => {
   const [image, setImage] = useState("");
@@ -23,10 +25,20 @@ const Achievement = (props) => {
   //   });
   // });
 
+  listAll(colRefImages).then((response) => {
+    response.items.forEach((item) => {
+      getDownloadURL(item).then((url) => {
+        if (item.name === props.achievement.images[0]) {
+          setImage(url);
+        }
+      });
+    });
+  }, []);
+
   return (
     <div className="selectedAchievement" onClick={HandleAchievementClicked}>
       <div className="selectedAchievement--image_container">
-        <img src="" alt="" className="selectedAchievement--image" />
+        <img src={image} alt="" className="selectedAchievement--image" />
       </div>
       <div className="selectedAchievement--texts">
         <div className="selectedAchievement--first_line">

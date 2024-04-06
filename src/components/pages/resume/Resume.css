@@ -21,9 +21,10 @@
 }
 
 .resume--heading {
-  font-size: 40px;
-  color: white;
+  font-size: 80px;
+  color: #ffcc55;
   font-family: "Protest Strike", sans-serif;
+  margin: 10px 0 -10px 100px
 }
 
 .resume--grid {

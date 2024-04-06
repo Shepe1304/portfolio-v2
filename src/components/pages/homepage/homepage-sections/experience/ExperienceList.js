@@ -13,7 +13,7 @@ const ExperienceList = () => {
       const data = await getDocs(colRefExperienceList);
       let tmpExperienceList = [];
       data.docs.map((doc) => {
-        if (doc.data().selected) {
+        if (doc.data().category === "work" && doc.data().selected) {
           tmpExperienceList = [...tmpExperienceList, doc.data()];
         }
       });

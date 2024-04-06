@@ -5,7 +5,7 @@
   /* width: 380px; */
   /* height: 490px; */
   border-radius: 4px;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: box-shadow 0.5s, scale 0.5s;
   /* transition: scale 0.5s; */
 }
@@ -19,7 +19,7 @@
 
 .selectedCommunityEngagement--image_container {
   width: 100%;
-  height: 250px;
+  height: 200px;
   background-color: rgb(5, 85, 85);
   border-bottom: 4px solid white;
   display: flex;
@@ -29,15 +29,16 @@
 }
 
 .selectedCommunityEngagement--image {
-  height: 100%;
-  /* width: 100%; */
-  object-fit: cover;
+  /* height: 100%; */
+  width: 100%;
+  object-fit: contain;
   object-position: center;
-  transition: height 0.5s;
+  transition: width 0.5s;
 }
 
 .selectedCommunityEngagement:hover .selectedCommunityEngagement--image {
-  height: 120%;
+  /* height: 120%; */
+  width: 120%;
 }
 
 /* description */

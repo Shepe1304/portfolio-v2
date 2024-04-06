@@ -14,11 +14,23 @@ const ExperienceList = () => {
   useEffect(() => {
     const getExperienceList = async () => {
       const data = await getDocs(colRefExperienceList)
-      setExperienceList(
-        data.docs.map((doc) => ({
-          ...doc.data()
-        }))
-      )
+      let tmpExperienceList = [];
+      data.docs.map((doc) => {
+        if (doc.data().category === "work") {
+          tmpExperienceList = [...tmpExperienceList, doc.data()];
+        }
+      });
+      data.docs.map((doc) => {
+        if (doc.data().category === "community") {
+          tmpExperienceList = [...tmpExperienceList, doc.data()];
+        }
+      });
+      setExperienceList(tmpExperienceList);
+      // setExperienceList(
+      //   data.docs.map((doc) => ({
+      //     ...doc.data()
+      //   }))
+      // )
     }
     getExperienceList()
   }, [])
@@ -28,7 +40,7 @@ const ExperienceList = () => {
       <Header color="white" backgroundColor="#2e3047"/>
       <div className="experienceList--main">
         <img src={nightsky} alt="" className="experienceList--background" />
-        <div className="experienceList--heading">SHEPE'S WORK EXPERIENCE</div>
+        <div className="experienceList--heading">SHEPE'S EXPERIENCE</div>
         <div className="experienceList--subheading">A sample collection of Shepe's work experience. Click to see details!</div>
         <div className="experienceList--grid">
           {
