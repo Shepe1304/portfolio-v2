@@ -6,7 +6,11 @@ import phone from "../../../../assets/images/phone.png";
 const ContactMe = () => {
   return (
     <>
-      <div className="contactMe--scroll_anchor" id="contactMe" style={{marginBottom:"80px"}}></div>
+      <div
+        className="contactMe--scroll_anchor"
+        id="contactMe"
+        style={{ marginBottom: "80px" }}
+      ></div>
       <div className="contactMe">
         <div className="contactMe--heading">GET IN TOUCH</div>
         <div className="contactMe--contents">
