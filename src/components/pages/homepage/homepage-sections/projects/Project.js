@@ -40,9 +40,9 @@ const Project = (props) => {
             <img src="" alt="" className="selectedProject--image" />
           </div>
           <div className="selectedProject--descriptions">
-            <div className="selectedProject--name">Cannot load data from Firebase</div>
-            <div className="selectedProject--type">Cannot load data from Firebase</div>
-            <div className="selectedProject--overview">Cannot load data from Firebase</div>
+            <div className="selectedProject--name">Loading data from database...</div>
+            <div className="selectedProject--type">Loading data from database...</div>
+            <div className="selectedProject--overview">Loading data from database...</div>
           </div>
         </div>
       )}

@@ -103,7 +103,11 @@ const AchievementDetails = (props) => {
                       alt=""
                       className="achievementDetails--image"
                     />
-                  ) : null}
+                  ) : (
+                    <div className="achievementDetails--image" style={{fontSize:"20px", fontStyle:"italic"}}>
+                      Loading images from database...
+                    </div>
+                  )}
                   {image1 !== "" ? (
                     <img
                       src={image1}
