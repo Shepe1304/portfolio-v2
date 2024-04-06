@@ -57,6 +57,11 @@
   gap: 20px;
 }
 
+.header--button_container {
+  color: white;
+  text-decoration: none;
+}
+
 .header--button {
   width: 140px;
   height: 100%;

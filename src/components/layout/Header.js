@@ -26,13 +26,12 @@ const Header = (props) => {
     navigate("/resume");
   };
 
-  const HandleContactClick = () => {
-    alert("Contact clicked!")
-  };
-
   return (
     <>
-      <header className="header" style={{ color: props.color, backgroundColor: props.backgroundColor }}>
+      <header
+        className="header"
+        style={{ color: props.color, backgroundColor: props.backgroundColor }}
+      >
         <div className="header--logo_container" onClick={HandleLogoClick}>
           <img src={shepeLogo} alt="" className="header--logo" />
           <div className="header--logo_text">Shepe</div>
@@ -58,11 +57,13 @@ const Header = (props) => {
             <div className="header--button_slide"></div>
             <div className="header--button_slide2"></div>
           </div>
-          <div className="header--button" onClick={HandleContactClick}>
-            <div className="header--button_text">CONTACT ME</div>
-            <div className="header--button_slide"></div>
-            <div className="header--button_slide2"></div>
-          </div>
+          <a className="header--button_container" href="#contactMe">
+            <div className="header--button">
+              <div className="header--button_text">CONTACT ME</div>
+              <div className="header--button_slide"></div>
+              <div className="header--button_slide2"></div>
+            </div>
+          </a>
         </div>
       </header>
       <div className="header--dummy"></div>
