@@ -26,6 +26,10 @@ const Header = (props) => {
     navigate("/resume");
   };
 
+  const ReturnToHomepage = () => {
+    navigate("/")
+  }
+
   return (
     <>
       <header
@@ -57,13 +61,23 @@ const Header = (props) => {
             <div className="header--button_slide"></div>
             <div className="header--button_slide2"></div>
           </div>
-          <a className="header--button_container" href="#contactMe">
-            <div className="header--button">
-              <div className="header--button_text">CONTACT ME</div>
-              <div className="header--button_slide"></div>
-              <div className="header--button_slide2"></div>
-            </div>
-          </a>
+          {props.showContactMe ? (
+            <a className="header--button_container" href="#contactMe">
+              <div className="header--button">
+                <div className="header--button_text">CONTACT ME</div>
+                <div className="header--button_slide"></div>
+                <div className="header--button_slide2"></div>
+              </div>
+            </a>
+          ) : (
+            <a className="header--button_container" onClick={ReturnToHomepage}>
+              <div className="header--button">
+                <div className="header--button_text">Homepage</div>
+                <div className="header--button_slide"></div>
+                <div className="header--button_slide2"></div>
+              </div>
+            </a>
+          )}
         </div>
       </header>
       <div className="header--dummy"></div>
