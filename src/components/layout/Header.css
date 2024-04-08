@@ -58,7 +58,7 @@
 }
 
 .header--button_container {
-  color: white;
+  color: inherit;
   text-decoration: none;
 }
 
