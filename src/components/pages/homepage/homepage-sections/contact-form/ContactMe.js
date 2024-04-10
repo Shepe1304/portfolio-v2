@@ -25,7 +25,7 @@ const ContactMe = () => {
       );
     
     alert("Form successfully submitted. Thank you for your message.")
-    window.location.reload();
+    // window.location.reload();
   };
 
   return (
