@@ -29,9 +29,7 @@ const Header = (props) => {
   const ReturnToHomepage = () => {
     navigate("/")
   }
-
-  console.log(props.showContactMe);
-
+  
   return (
     <>
       <header
