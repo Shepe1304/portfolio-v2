@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./ContactMe.css";
 import envelope from "../../../../assets/images/envelope.png";
 import phone from "../../../../assets/images/phone.png";
@@ -6,6 +6,10 @@ import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
   const form = useRef();
+
+  const [formcontent, setFormcontent] = useState("");
+  const [formname, setFormname] = useState("");
+  const [formemail, setFormemail] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,9 +28,9 @@ const ContactMe = () => {
       );
 
     alert("Form successfully submitted. Thank you for your message.");
-    setTimeout(() => {
-      window.location.reload();
-    }, 1000);
+    setFormcontent("");
+    setFormname("");
+    setFormemail("");
   };
 
   return (
@@ -74,12 +78,16 @@ const ContactMe = () => {
                 placeholder="Name..."
                 className="contactMe--name_input"
                 name="from_name"
+                value={formname}
+                onChange={(e) => setFormname(e.target.value)}
               />
               <input
                 type="text"
                 placeholder="Email..."
                 className="contactMe--name_email"
                 name="from_email"
+                value={formemail}
+                onChange={(e) => setFormemail(e.target.value)}
               />
               <textarea
                 cols="30"
@@ -87,6 +95,8 @@ const ContactMe = () => {
                 placeholder="Please type what you want to say..."
                 className="contactMe--content_input"
                 name="message"
+                value={formcontent}
+                onChange={(e) => setFormcontent(e.target.value)}
               ></textarea>
               <button className="contactMe--submit_button">Submit</button>
             </form>
