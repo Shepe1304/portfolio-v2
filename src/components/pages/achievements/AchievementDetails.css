@@ -1,7 +1,5 @@
 .achievementDetails {
   background-color: rgb(104, 222, 216);
-  /* height: 100vh; */
-  /* font-family: 'Courier New', Courier, monospace; */
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
 }
@@ -13,7 +11,6 @@
 
 .achievementDetails--backButton {
   cursor: pointer;
-  /* display: inline-block; */
   display: inline-flex;
   gap: 20px;
   align-items: center;
@@ -60,13 +57,11 @@
 
 .achievementDetails--trophy_tag {
   background-color: rgb(210, 193, 95);
-  /* color: black; */
   border-radius: 10%;
   padding: 2px 10px;
 }
 
 .achievementDetails--sections {
-  /* padding: 20px 150px 20px 40px; */
   padding: 20px 0 20px 40px;
 }
 

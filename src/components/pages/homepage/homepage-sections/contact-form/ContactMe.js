@@ -51,9 +51,6 @@ const ContactMe = () => {
               If you want to collaborate, please feel free to contact me via the
               email below or send this form!
             </div>
-            {/* <div className="contactMe--statement_image">
-            <img src={envelope} alt="" />
-          </div> */}
             <div className="contactMe--contacts">
               <div className="contactMe--contact_container">
                 <img
@@ -83,7 +80,6 @@ const ContactMe = () => {
                 className="contactMe--name_email"
                 name="from_email"
               />
-              {/* <input type="text" placeholder="What you want to say..."/> */}
               <textarea
                 cols="30"
                 rows="10"

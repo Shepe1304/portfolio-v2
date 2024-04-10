@@ -52,7 +52,6 @@ const AchievementDetails = (props) => {
           </span>{" "}
           <span style={{ fontSize: "20px" }}>Back to Achievements</span>
         </div>
-        {/* <div className="achievementDetails--name">{props.achievement.contest}{" "}{props.achievement.year}</div> */}
         <div className="achievementDetails--name">
           {props.achievement.contest}
         </div>
