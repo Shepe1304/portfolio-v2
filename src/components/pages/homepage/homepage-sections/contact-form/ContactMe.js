@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useRef }  from "react";
 import "./ContactMe.css";
 import envelope from "../../../../assets/images/envelope.png";
 import phone from "../../../../assets/images/phone.png";
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_hm7tmua', 'template_n4pli9v', form.current, {
+        publicKey: 'yJC8j_WODIfX6drXQ',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    
+    alert("Form successfully submitted. Thank you for your message.")
+    window.location.reload();
+  };
+
   return (
     <>
       <div
@@ -46,16 +70,18 @@ const ContactMe = () => {
             </div>
           </div>
           <div className="contactMe--form_container">
-            <div className="contactMe--form">
+            <form className="contactMe--form" ref={form} onSubmit={sendEmail}>
               <input
                 type="text"
                 placeholder="Name..."
                 className="contactMe--name_input"
+                name="from_name"
               />
               <input
                 type="text"
                 placeholder="Email..."
                 className="contactMe--name_email"
+                name="from_email"
               />
               {/* <input type="text" placeholder="What you want to say..."/> */}
               <textarea
@@ -63,9 +89,10 @@ const ContactMe = () => {
                 rows="10"
                 placeholder="Please type what you want to say..."
                 className="contactMe--content_input"
+                name="message"
               ></textarea>
               <button className="contactMe--submit_button">Submit</button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
