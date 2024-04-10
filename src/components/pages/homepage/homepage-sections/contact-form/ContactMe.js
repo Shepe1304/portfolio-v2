@@ -1,31 +1,32 @@
-import React, { useRef }  from "react";
+import React, { useRef } from "react";
 import "./ContactMe.css";
 import envelope from "../../../../assets/images/envelope.png";
 import phone from "../../../../assets/images/phone.png";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
-
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_hm7tmua', 'template_n4pli9v', form.current, {
-        publicKey: 'yJC8j_WODIfX6drXQ',
+      .sendForm("service_hm7tmua", "template_n4pli9v", form.current, {
+        publicKey: "yJC8j_WODIfX6drXQ",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log("SUCCESS!");
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.log("FAILED...", error.text);
+        }
       );
-    
-    alert("Form successfully submitted. Thank you for your message.")
-    window.location.reload();
+
+    alert("Form successfully submitted. Thank you for your message.");
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
   };
 
   return (
