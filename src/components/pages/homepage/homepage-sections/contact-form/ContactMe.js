@@ -31,13 +31,6 @@ const ContactMe = () => {
     setFormcontent("");
     setFormname("");
     setFormemail("");
-<<<<<<< HEAD
-    // setTimeout(() => {
-    //   window.location.reload();
-    // }, 1000);
-=======
->>>>>>> c727dd07086886a654070929942ed4702cdd1b56
-  };
 
   return (
     <>
@@ -101,10 +94,6 @@ const ContactMe = () => {
                 placeholder="Please type what you want to say..."
                 className="contactMe--content_input"
                 name="message"
-<<<<<<< HEAD
-                // defaultValue={formcontent}
-=======
->>>>>>> c727dd07086886a654070929942ed4702cdd1b56
                 value={formcontent}
                 onChange={(e) => setFormcontent(e.target.value)}
               ></textarea>
