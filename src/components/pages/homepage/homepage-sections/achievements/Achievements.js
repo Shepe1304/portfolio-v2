@@ -3,6 +3,7 @@ import Achievement from "./Achievement";
 import "./Achievements.css";
 import { colRefAchievements } from "../../../../../firebase";
 import { getDocs } from "firebase/firestore";
+import { useNavigate } from "react-router";
 
 const Achievements = () => {
 
@@ -22,11 +23,17 @@ const Achievements = () => {
     getAchievements();
   }, [])
 
+  const navigate = useNavigate();
+
+  const HandleSeeMoreClicked = () => {
+    navigate("/achievements")
+  }
+
   return (
     <div className="selectedAchievements">
       <div className="selectedAchievements--headings">
         <div className="selectedAchievements--heading">ACHIEVEMENTS</div>
-        <div className="selectedAchievements--see_more">
+        <div className="selectedAchievements--see_more" onClick={HandleSeeMoreClicked}>
           See more &#x2192;
         </div>
       </div>

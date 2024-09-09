@@ -30,7 +30,7 @@ const Header = (props) => {
     navigate("/")
   }
 
-  console.log(props.showContactMe);
+  // console.log(props.showContactMe);
 
   return (
     <>
