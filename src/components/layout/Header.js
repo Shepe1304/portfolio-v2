@@ -29,9 +29,13 @@ const Header = (props) => {
   const ReturnToHomepage = () => {
     navigate("/")
   }
+<<<<<<< HEAD
 
   // console.log(props.showContactMe);
 
+=======
+  
+>>>>>>> c727dd07086886a654070929942ed4702cdd1b56
   return (
     <>
       <header
